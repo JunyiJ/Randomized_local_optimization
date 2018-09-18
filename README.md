@@ -1,4 +1,4 @@
-# Randomized_optimization
+# Randomized optimization and local search methods
 
 ## Random hill climbing
 
