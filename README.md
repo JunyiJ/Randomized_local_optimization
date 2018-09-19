@@ -32,3 +32,9 @@ In general, the simulated annealing algorithms work as follows. At each time ste
 <br>
 
 ![Simulated annealing](https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif)
+
+## Differential Evolution
+This algorithm, invented by R. Storn and K. Price in 1997, is a very powerful algorithm for black-box optimization (also called derivative-free optimization). Black-box optimization is about finding the minimum of a function $f(x):R^n→R$, where we don’t know its analytical form, and therefore no derivatives can be computed to minimize it (or are hard to approximate). The figure below shows how the DE algorithm approximates the minimum of a function in succesive steps:
+
+
+https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python/
