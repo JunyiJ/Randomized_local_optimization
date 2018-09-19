@@ -21,7 +21,9 @@ Simulated annealing (SA) is a **probabilistic technique** for approximating the 
 
 For problems where finding an approximate global optimum is more important than finding a precise local optimum in a fixed amount of time, simulated annealing may be preferable to alternatives such as gradient descent.
 
-The name and inspiration come from annealing in **metallurgy**, a technique involving heating and controlled cooling of a material to increase the size of its crystals and reduce their defects. Both are attributes of the material that depend on its **thermodynamic free energy**. Heating and cooling the material affects both the temperature and the thermodynamic free energy. 
+The name and inspiration come from annealing in **metallurgy**, a technique involving heating and controlled cooling of a material to increase the size of its crystals and reduce their defects. Both are attributes of the material that depend on its **thermodynamic free energy**. Heating and cooling the material affects both the temperature and the thermodynamic free energy.
+
+![Simulated annealing](https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif)
 
 > ***The simulation of annealing can be used to find an approximation of a global minimum for a function with a large number of variables to the statistical mechanics of equilibration (annealing) of the mathematically equivalent artificial multiatomic system.***
 
@@ -29,12 +31,11 @@ This notion of slow cooling implemented in the simulated annealing algorithm is 
 
 In general, the simulated annealing algorithms work as follows. At each time step, the algorithm randomly selects a solution close to the current one, measures its quality, and then decides to move to it or to stay with the current solution based on either one of two probabilities between which it chooses on the basis of the fact that the new solution is better or worse than the current one. During the search, the temperature is progressively decreased from an initial positive value to zero and affects the two probabilities: at each step, the probability of moving to a better new solution is either kept to 1 or is changed towards a positive value; instead, the probability of moving to a worse new solution is progressively changed towards zero. 
 
-<br>
-
-![Simulated annealing](https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif)
-
 ## Differential Evolution
 This algorithm, invented by R. Storn and K. Price in 1997, is a very powerful algorithm for black-box optimization (also called derivative-free optimization). Black-box optimization is about finding the minimum of a function $f(x):R^n→R$, where we don’t know its analytical form, and therefore no derivatives can be computed to minimize it (or are hard to approximate). The figure below shows how the DE algorithm approximates the minimum of a function in succesive steps:
 
+![ackley](https://raw.githubusercontent.com/tirthajyoti/Randomized_local_optimization/master/Images/ackley.gif)
 
-https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python/
+The optimization of black-box functions is very common in real world problems, where the function to be optimized is very complex (and may involve the use of simulators or external software for the computations). For these kind of problems, DE works pretty well, and that’s why it’s very popular for solving problems in many different fields, including Astronomy, Chemistry, Biology, and many more.
+
+**[Here is an awesome explanation of the DE algorithm from Pablo](https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python/)**
